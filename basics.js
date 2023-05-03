@@ -1,3 +1,3 @@
-globalThis.setTimeout(()=>{
+setTimeout(()=>{
     console.log("Timed out");
 }, 3000)
