@@ -1,3 +1,3 @@
-const { people } = require("./people");
+const { people, ages } = require("./people");
 
-console.log(people);
+console.log(people, ages);
