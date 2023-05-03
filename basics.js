@@ -7,3 +7,5 @@ fs.readFile("./docs/blog.txt", (err, data) => {
 
   console.log(data.toString());
 });
+
+console.log("Non blocking");
