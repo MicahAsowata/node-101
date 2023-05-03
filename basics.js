@@ -1,10 +1,14 @@
 const fs = require("fs");
 
-fs.mkdir("./assets", (err) => {
-  if (err) {
-    console.log(err.message);
-    return;
-  }
+if (!fs.existsSync("./assets")) {
+  fs.mkdir("./assets", (err) => {
+    if (err) {
+      console.log(err.message);
+      return;
+    }
 
-  console.log("Directory successfully created");
-});
+    console.log("Directory successfully created");
+  });
+} else {
+  console.log("Folder exists");
+}
