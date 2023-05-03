@@ -10,5 +10,12 @@ if (!fs.existsSync("./assets")) {
     console.log("Folder successfully created");
   });
 } else {
-  console.log("Folder exists already");
+  fs.rmdir("./assets", (err) => {
+    if (err) {
+      console.log(err.message);
+      return;
+    }
+
+    console.log("Folder successfully deleted");
+  });
 }
