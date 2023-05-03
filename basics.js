@@ -4,6 +4,6 @@ const writeStream = fs.createWriteStream("./docs/blogOne.txt");
 readStream.on("data", (chunk) => {
   console.log("-- New chunk --");
   console.log(chunk);
-  writeStream.write("\nNEW CHUNK\n");
+  writeStream("\nNEW CHUNK\n");
   writeStream.write(chunk);
 });
