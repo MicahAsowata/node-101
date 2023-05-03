@@ -1,7 +1,9 @@
 const fs = require("fs");
-const readStream = fs.createReadStream("./docs/blog.txt");
-
+const readStream = fs.createReadStream("./docs/blog.txt", { encoding: "utf8" });
+const writeStream = fs.createWriteStream("./docs/blogOne.txt");
 readStream.on("data", (chunk) => {
   console.log("-- New chunk --");
-  console.log(chunk.toString());
+  console.log(chunk);
+  writeStream.write("\nNEW CHUNK\n");
+  writeStream.write(chunk);
 });
