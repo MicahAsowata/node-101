@@ -1,11 +1,13 @@
 const fs = require("fs");
 
-fs.readFile("./docs/blog.txt", (err, data) => {
-  if (err) {
-    console.log(err);
-  }
+fs.writeFile("./docs/blog.txt", "Hello, 🌍🌎🌏", () => {
+  fs.readFile("./docs/blog.txt", (err, data) => {
+    if (err) {
+      console.log(err.message);
+    }
 
-  console.log(data.toString());
+    console.log(data.toString());
+  });
 });
 
-console.log("Non blocking");
+console.log("writing file....");
