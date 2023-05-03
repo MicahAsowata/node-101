@@ -1,0 +1,1 @@
+Hurray, /home/micah/Projects/Playground/node-101/basics.js has being created
