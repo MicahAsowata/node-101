@@ -10,5 +10,5 @@ if (!fs.existsSync("./assets")) {
     console.log("Directory successfully created");
   });
 } else {
-  console.log("Folder exists");
+  console.log("Folder exists already");
 }
